@@ -99,6 +99,7 @@ article >h2 {
 aside {
     border: 1px solid #222;
     padding: 16px;
+    /* height: fit-content; */
     
 }
 
