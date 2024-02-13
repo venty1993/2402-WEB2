@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div></div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <header>
+        <nav></nav>
+    </header>
+    <main></main>
+    <section></section>
+    <footer></footer>
+
+    <!-- header -->
+    <header>
+        웹문서의 머릿글
+        페이지의 상단부분
+        홈이나 네비게이션이 포함된다
+    </header>
+
+    <footer>
+        웹문서의 바닥글
+        페이지의 하단부분
+        연락처, 사이트맵등의 다양한 정보가 들어간다.
+    </footer>
+
+    <main>
+        메인내용을 담는 태그
+        문서에 한번만
+        의미론적으로 봤을때 최상단에 위치해야하는 태그이다.
+        예를들어서
+        <header>
+            <main></main>
+        </header>
+        이런건 안됩니다
+    </main>
+
+    <section>
+        컨텐츠의 그룹을 분리하는 태그
+        제목태그가 하나 이상 포함되어있어야한다.
+    </section>
+
+    <nav>
+        웹페이지의 메뉴등 링크들이 들어가는 태그
+        의미를 부여하기 위해서 ul태그를 감싸는경우도 많다.
+
+        <nav>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+        구조적으로 봤을때는
+        nav와 ul이 박스 역할을 하기때문에 무의미한 중첩구조일수 있지만
+        의미론적으로는 유효한 작성이다.
+
+    </nav>
+
+    <article>
+        section태그가 컨텐츠의 그룹이라면
+        article 태그는 컨텐츠 하나하나를 나누기에 적합한 태그이다.
+    
+        section > article
+        article > section
+
+        둘 모두 가능한 작성
+    </article>
+
+    <aside>
+        본문내용과 관련이 없는 내용들을 배치하는 태그
+    </aside>
+
+</body>
+</html>
