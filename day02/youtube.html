@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+         .test-box {
+            width:100px;
+            height: 0;
+            /* 부모 태그의 width에 영향을 받기때문에 이컨텐츠는 body의 영향을 받는다.*/
+            padding-top: 10%;
+            /* box-sizing: border-box; */
+            background-color: pink;
+         }
+
+         .content {
+            width: 50%;
+         }
+
+         .video-container {
+            padding-top: 56.25%;
+            position: relative;
+        }
+        
+        .padding-box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+         }
+
+         .test-box2 {
+            width: 500px;
+            background-color: pink;
+            aspect-ratio: 16/9;
+         }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="video-container">
+            <iframe class="padding-box" src="https://www.youtube.com/embed/Qwx8JWUKpjE" title="[KPOP Playlist] 케이팝 노동요 드가자 ➁" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <iframe class="aspect-box" src="https://www.youtube.com/embed/Qwx8JWUKpjE" title="[KPOP Playlist] 케이팝 노동요 드가자 ➁" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+    <div class="test-box"></div>
+
+    <div class="test-box2"></div>
+
+    <!-- width : 100%
+
+    //height : 56.25vw//
+
+    view-port : 500
+    padding : 0 32px = 64px
+    container : 436px
+
+    원하는 높이 : 245.25px
+    동영상 {
+        width : 100%; // 실제사이즈 : 436px
+        height : 56.25vw // 실제사이즈 : 281.25px
+    }
+ -->
+
+    <!-- 컨텐츠를 iframe으로 가져오거나 background-image등으로 사진을 가져올때 -->
+    <!-- 비율이 맞지않는것을 해결하기위한 두가지 방법 -->
+
+    <!-- 1. padding을 활용하는 방법(구식, 살짝 억지, 호환성 좋음) -->
+    <!-- 2. aspect-ratio 속성을 이용하는 방식(신식, 호환성은 안좋을지도?) -->
+
+
+</body>
+</html>

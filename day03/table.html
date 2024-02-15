@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        td {
+            width: 50px;
+            height: 25px;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <!-- table>tr*5>td*5 -->
+    <table>
+        <tr>
+            <!-- colspan은 열방향, rowspan은 행방향으로 확장 -->
+            <td colspan="2" rowspan="3"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <!-- 넘친 셀은 지워줘야합니다. -->
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
