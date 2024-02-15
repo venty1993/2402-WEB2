@@ -8,34 +8,62 @@
     <!-- <link rel="stylesheet" href="homework.css"> -->
     <style>
         * {
-    margin: 0;
-    padding: 0;
+            margin: 0;
+            padding: 0;
         }
 
-        td {
-            width: 75px;
-            height: 25px;
-            border: 1px solid #222;
-            text-align: center;
-            font-size: 8px;
-            font-weight: bold;
+        table {
+            /* border-spacing: 0; */
+            /* 테두리 사이의 간격을 없애주긴 하지만, 테두리가 의도한 굵기의 두배가 되어버리는 문제가 있다. */
+
+            border-collapse: collapse;
+            /* separate(기본값) : 분리된 */
+            /* collapse : 붕괴되다 (여백이) */
         }
+
+        td,th {
+            width: 150px;
+            height: 50px;
+            border: 1px solid #AAA;
+            text-align: center;
+            font-size: 16px;
+
+            /* 테이블에서만 쓸수 있는 속성 */
+            vertical-align: bottom;
+            /* 그 외의 경우에 텍스트를 박스기준 정렬 하고싶다면 */
+            /* flex 속성을 활용 할 수 있습니다. */
+        }
+
+        th {
+            font-weight: bold;
+            background-color: #e1c2fd;
+        }
+
+
     </style>
 
 </head>
 <body>
     <table>
+        <colgroup>
+            <col style="width: 300px;">
+            <col>
+            <col style="background-color: pink;">
+            <col>
+            <col span="2" style="background-color: gray;">
+            <!-- <col> -->
+        </colgroup>
         <tr>
-            <td colspan="2"rowspan="2">구분</td>
-            <td rowspan="2">운영시간</td>
-            <td rowspan="2">대인/소인</td>
-            <td colspan="2">이용요금</td>
-            <!-- <td></td> -->
-            <!-- <td></td> -->
+            <th colspan="2"rowspan="2">구분</th>
+            <th rowspan="2">운영시간</th>
+            <th rowspan="2">대인/소인</th>
+            <th colspan="2">이용요금</th>
+            <!-- <th></th> -->
+            <!-- <th></th> -->
         </tr>
         <tr>
-            <td>주중(월~금)</td>
-            <td>주말(토~일)/공휴일</td>
+            <th>주중(월~금)</th>
+            <th>주말(토~일)/공휴일</th>
             <!-- <td></td> -->
             <!-- <td></td> -->
             <!-- <td></td> -->
@@ -49,7 +77,7 @@
             <td>60,000원</td>
             <td>70,000원</td>
         </tr>
-        <tr>
+        <tr style="background-color: blue;">
             <td>소인</td>
             <td>48,000원</td>
             <td>58,000원</td>
