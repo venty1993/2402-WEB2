@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box1 {
+        width: 60%;
+        aspect-ratio: 1;
+        background-color: pink;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+
+        /* position으로 겹쳐진 컨텐츠의 높낮이 설정가능 */
+        /* 값은 되도록 널널하게 사용해 유지보수 편의성을 높이는것이 좋다. */
+        z-index: 100;
+
+        /* 또한 z-index속성도 top, left등과 같이 position의 부수 속성들이기때문에
+        static 상태인 컨텐츠한테는 속성 적용이 안된다. */
+    }
+
+    .box2 {
+        width: 60%;
+        aspect-ratio: 1;
+        background-color: cadetblue;
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    .box3 {
+        width: 60%;
+        aspect-ratio: 1;
+        background-color: yellow;
+        position: absolute;
+        right: 150px;
+        bottom: 150px;
+        z-index: 50;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="box1">1번박스</div>
+    <div class="box2">2번박스</div>
+    <div class="box3">3번박스</div>
+</body>
+</html>
