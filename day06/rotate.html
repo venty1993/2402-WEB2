@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #222;
+
+            margin: 40px;
+        }
+
+        .rotate-box {
+            height: 100%;
+            background-color: cadetblue;
+
+            transition: 1s;
+        }
+
+        .rotate-box:hover {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rotate-box" style="transform-origin: 0% 0%;">
+            안녕하세요(rotate) 0% 0%
+        </div>
+    </div>
+    <div class="container">
+        <div class="rotate-box" style="transform-origin: 0% 50%;">
+            안녕하세요(rotate) 0% 50%
+        </div>
+    </div>
+    <div class="container">
+        <div class="rotate-box" style="transform-origin: 50% 0%;">
+            안녕하세요(rotate) 50% 0%
+        </div>
+    </div>
+    <div class="container">
+        <div class="rotate-box" style="transform-origin: 200% 200%;">
+            안녕하세요(rotate) 200% 200%
+        </div>
+    </div>
+</body>
+</html>

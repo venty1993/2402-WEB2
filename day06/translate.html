@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-translate=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: flex;
+            width: fit-content;
+            border: 1px solid #222;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 16px;
+        }
+
+        .margin-box:hover {
+            margin-left: 50px;
+        }
+
+        .translate-box:hover {
+            transform: translateX(50px);
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="margin-box">
+            안녕하세요(margin)
+        </div>
+        <div class="translate-box">
+            안녕하세요(translate)
+        </div>
+    </section>
+</body>
+</html>

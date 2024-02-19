@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dice {
+            width: 100px;
+            height: 100px;
+
+            position: relative;
+            transform-style: preserve-3d;
+
+            /* dice의 로테이트값을 조절하면 모양을 확인할수 있습니다. */
+            transform: rotateY(45deg);
+        }
+
+        .dice-side {
+            width: 100%;
+            height: 100%;
+            
+            font-size: 36px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: #00000020;
+            border-radius: 8px;
+
+            position: absolute;
+            top: 0;
+
+            /* 아래 side$들 작성에서 우선순위에 밀려 사라지는 부분 */
+            /* transform: translateX(50px); */
+        }
+
+        .side1{
+            transform: translateZ(50px);
+        }
+
+
+        /* rotate 속성과 translate 속성을 이용해 육면체를 만들어보자! */
+
+
+</style>
+</head>
+<body>
+    <div class="dice">
+        <div class="dice-side side1">1</div>
+        <div class="dice-side side2">2</div>
+        <div class="dice-side side3">3</div>
+        <div class="dice-side side4">4</div>
+        <div class="dice-side side5">5</div>
+        <div class="dice-side side6">6</div>
+    </div>
+</body>
+</html>
