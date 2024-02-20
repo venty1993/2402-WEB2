@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .basic-box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+
+            transition: 0.1s;
+
+
+            /* transition의 속성 */
+
+            /* transition-duration : 지속시간 */
+                /* 가장 기본적인 속성이므로 반드시 필요하고, transtion에 시간값만 적으면 duration이 된다. */
+
+            /* transition-delay : 움직이기 전 대기시간 */
+                /* 여러개의 인터렉션을 동시에 작동할때 좀더 역동적인 애니메이션을 만드는데에 주로 사용된다. */
+
+            /* transition-timing-function : 가속도 함수 (기본값 :ease) */
+                /* 현실세계의 움직임과 기본값인 이지의 움직임이 매우 유사하기때문에 기본값 사용 무난 */
+                /* 다른 가속도로 표현하고싶을땐 가속도 함수 사이트 참고해서 원하는 가속도 복사해서 사용하면 됨 */
+
+            /* transition-property : 트랜지션 적용할 속성 세부설정 */
+        }
+
+        .basic-box:hover {
+            transform: rotate(45deg);
+        }
+
+        .delay-test {
+            transition-delay: 1s;
+        }
+
+        .text-container {
+            width: 500px;
+        }
+
+        .text-container > * {
+            transform: translateY(50px);
+            opacity: 0;
+            /* 트랜지션 위치에 따라 나타날때만 적용 or 사라질때도 적용 선택 가능 */
+            transition: 0.2s;
+        }
+        
+        .text-container:hover > * {
+            transform: none;
+            opacity: 1;
+            /* 트랜지션을 여기에 넣으면 사라질때는 애니메이션이 작동하지 않습니다. */
+        }
+
+        .text-container:hover > *:nth-child(1){
+            transition-delay: 0.1s;
+        }
+        .text-container:hover > *:nth-child(2){
+            transition-delay: 0.2s;
+        }
+        .text-container:hover > *:nth-child(3){
+            transition-delay: 0.3s;
+        }
+
+        .timing-test {
+            /* transition-timing-function: linear; */
+            transition-duration: 2s;
+            transform: translate(200px);
+        }
+
+        .test-box {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+        .test-box {
+            transition: 1s;
+        }
+
+        .test-box:first-child {
+            transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+        }
+
+        .timing-test-box:hover > .test-box {
+            transform: translate(400px);
+        }
+
+        .property-box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition-property: width, height;
+            transition-duration: 1s;
+            transition-delay: 0s, 1s;
+        }
+
+        .property-box:hover {
+            width: 100%;
+            height: 500px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="basic-box">
+        마우스를 올려보세요
+    </div>
+    
+    <div class="basic-box delay-test">
+        마우스를 올려보세요
+    </div>
+
+    <div class="text-container">
+        <h2>컨텐츠의 제목</h2>
+        <h3>부제목이 들어가는 영역입니다</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus totam sit voluptates culpa optio unde iste a eum, ea beatae aperiam facilis hic perspiciatis laboriosam! Repudiandae sapiente asperiores labore consequatur.</p>
+    </div>
+
+    <div class="basic-box timing-test">
+        마우스를 올려보세요
+    </div>
+
+    <div class="timing-test-box">
+        <div class="test-box">동시에 움직입니다</div>
+        <div class="test-box">동시에 움직입니다</div>
+    </div>
+
+    <div class="property-box">
+        마우스를 올려보세요
+    </div>
+</body>
+</html>

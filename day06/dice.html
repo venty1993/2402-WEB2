@@ -19,6 +19,7 @@
 
             /* dice의 로테이트값을 조절하면 모양을 확인할수 있습니다. */
             transform: rotateY(45deg);
+            animation: dice-roll 2s linear infinite;
         }
 
         .dice-side {
@@ -38,13 +39,44 @@
             position: absolute;
             top: 0;
 
+            transform-origin: 50% 50% -50px;
+
             /* 아래 side$들 작성에서 우선순위에 밀려 사라지는 부분 */
             /* transform: translateX(50px); */
+
+            
         }
 
         .side1{
             transform: translateZ(50px);
         }
+        .side2 {
+            transform: translateZ(50px) rotateY(90deg);
+        }            
+        .side3 {
+            transform: translateZ(50px) rotateX(90deg);
+        }            
+        .side4 {
+            transform: translateZ(50px) rotateX(-90deg);
+        }            
+        .side5 {
+            transform: translateZ(50px) rotateY(270deg);
+        }            
+        .side6 {
+            transform: translateZ(50px) rotateY(180deg);
+        }           
+        
+        
+        @keyframes dice-roll {
+            from {
+                transform: rotate3d(1, 1, 1, 0deg);
+            }
+    
+            to {
+                transform: rotate3d(1, 1, 1, 360deg);
+            }
+        }
+              
 
 
         /* rotate 속성과 translate 속성을 이용해 육면체를 만들어보자! */
