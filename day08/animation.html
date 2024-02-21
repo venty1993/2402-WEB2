@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+
+            position: relative;
+        }
+
+        .move {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            position: absolute;
+            top: 100px;
+
+            animation: 2s 오른쪽으로이동 both;
+            /* 2초짜리 애니메이션, from(0%) = 0초  to(100% = 2초) */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* name : 우리가 정한 키프레임의 이름 */
+            /* duration :  애니메이션의 총 재생시간 */
+            /* timing-function : 가속도 */
+            /* iteration-count : 반복횟수. 특정 값(숫자)나 무한반복(infinite)설정 가능  */
+            /* direction : 정, 역방향 재생 및 정-역, 역-정 재생 설정가능 */
+            /* fill-mode : 재생시간 밖의 위치를 결정 */
+        }
+
+        @keyframes 오른쪽으로이동 {
+            from{
+                left: 100px;
+            }
+            to {
+                left: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="move"></div>
+    </div>
+</body>
+</html>

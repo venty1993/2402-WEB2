@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #wrap {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: linear-gradient(#555, #CCC);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation: 2s rint linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes rint {
+            from {
+                left: 0px;
+                transform: rotate(0deg);
+            }
+
+            50% {
+                left: 500px;
+            }
+
+            100% {
+                transform: rotate(360deg);
+                left: 500px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>animation</h1>
+    </div>
+</body>
+</html>

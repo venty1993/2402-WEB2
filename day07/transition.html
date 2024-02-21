@@ -114,8 +114,10 @@
             justify-content: center;
             align-items: center;
 
+            /* 서로 다른 속성에 각각 transition 설정을 할 수 있다. */
             transition-property: width, height;
             transition-duration: 1s;
+            /* 속성은 순서로 매칭해 구분한다. width(1번째) : 0s(1번째) height(2번째) :1s(2번째) */
             transition-delay: 0s, 1s;
         }
 
