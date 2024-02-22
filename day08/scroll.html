@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+
+            position: relative;
+        }
+
+        .animation-container {
+            position: absolute;
+
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%,-50%);
+
+            width: 20px;
+            height: 40px;
+            /* background-color: #444; */
+        }
+
+        .mouse {
+            width: 100%;
+            height: 30px;
+            border: 2px solid white;
+            box-sizing: border-box;
+            border-radius: 10px;
+
+            position: relative;
+
+            animation: mouse-down 2s infinite;
+        }
+        
+        .wheel {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+
+            position: absolute;
+            left: 50%;
+            top: 25%;
+
+            transform: translate(-50%,-50%);
+
+            animation: wheel-down 2s infinite;
+        }
+
+        @keyframes wheel-down {
+
+            0% {
+                top: 25%;
+            }
+
+            33% {
+                top: 25%;
+            }
+            
+            66% {
+                top: 75%;
+            }
+
+            100% {
+                top: 75%;
+            }
+            
+        }
+
+        @keyframes mouse-down {
+
+            0% {
+                top: 0px;
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            33% {
+                top: 0px;
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            66% {
+                top: 10px;
+                opacity: 1;
+            }
+
+            100% {
+                top: 10px;
+                opacity: 0;
+                /* transform: scale(1); */
+            }
+            
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="animation-container">
+            <!-- 애니메이션이 움직일 전체 공간 확보 -->
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
