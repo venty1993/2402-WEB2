@@ -16,14 +16,18 @@
             background-color: gray;
 
             position: relative;
+            
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         .animation-container {
-            position: absolute;
+            /* position: absolute; */
 
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
+            /* left: 50%;
+            top: 50%; */
+            /* transform: translate(-50%,-50%); */
 
             width: 150px;
             /* height: 250px; */
@@ -39,13 +43,13 @@
         }
 
         .ver-line {
-            width: 50px;
-            height: 250px;
+            width: 50px !important;
+            height: 0px;
         }
 
         .hor-line {
-            width: 150px;
-            height: 50px;
+            width: 0px;
+            height: 50px !important;
         }
 
         .top {
@@ -69,6 +73,162 @@
             left: 0;
             transform: translateY(-50%);
         }
+
+        .line1 {
+            animation: line1 5s both infinite alternate;
+        }
+
+        .line2 {
+            animation: line2 5s both infinite alternate;
+        }
+
+        .line3 { 
+            animation: line3 5s both infinite alternate;
+        }
+        .line4 { 
+            animation: line4 5s both infinite alternate;
+        }
+        .line5 { 
+            animation: line5 5s both infinite alternate;
+        }
+        /* .line1 {
+            animation: stroking 1s both;
+        }
+
+        .line2 {
+            animation: stroking 1s both;
+            animation-delay: 1s;
+        }
+        
+        .line3 { 
+            animation: stroking 1s both;
+            animation-delay: 2s;
+        }
+        .line4 { 
+            animation: stroking 1s both;
+            animation-delay: 3s;
+        }
+        .line5 { 
+            animation: stroking 1s both;
+            animation-delay: 4s;
+        } */
+
+        @keyframes stroking {
+            from {
+                width: 0;
+                height: 0;
+            }
+
+            to {
+                width: 150px;
+                height: 250px;
+            }
+            
+        }
+
+
+        @keyframes line1 {
+            from {
+                width: 0;
+                height: 0;
+            }
+
+            20% {
+                width: 150px;
+                height: 250px;
+            }
+
+            to {
+                width: 150px;
+                height: 250px;
+            }
+        }
+
+        @keyframes line2 {
+            0% {
+                width: 0;
+                height: 0;
+            }
+
+            20% {
+                width: 0;
+                height: 0;
+            }
+
+            40% {
+                width: 150px;
+                height: 250px;
+            }
+
+            100%{
+                width: 150px;
+                height: 250px;
+            }
+            
+        }
+
+        @keyframes line3 {
+            0% {
+                width: 0;
+                height: 0;
+            }
+
+            40% {
+                width: 0;
+                height: 0;
+            }
+
+            60% {
+                width: 150px;
+                height: 250px;
+            }
+
+            100%{
+                width: 150px;
+                height: 250px;
+            }
+            
+        }
+        @keyframes line4 {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            
+            60% {
+                width: 0;
+                height: 0;
+            }
+            
+            80% {
+                width: 150px;
+                height: 250px;
+                
+            }
+
+            100%{
+                width: 150px;
+                height: 250px;
+            }
+            
+        }
+        @keyframes line5 {
+            0% {
+                width: 0;
+                height: 0;
+            }
+
+            80% {
+                width: 0;
+                height: 0;
+            }
+
+            100%{
+                width: 150px;
+                height: 250px;
+            }
+            
+        }
     </style>
 </head>
 <body>
@@ -78,10 +238,36 @@
             <div class="line1 line ver-line left"></div>
             <div class="line2 line hor-line center"></div>
             <div class="line3 line ver-line right"></div>
+            <!-- 획은 총 3개 -->
+            <!-- 애니메이션은 한 묶음으로 -->
+            <!-- 1초에 한획씩 써지고, 써진후에 2초정도는 정지 -->
 
+            <!-- 0~1초 : 1획 -->
+            <!-- 1~2초 : 2획 -->
+            <!-- 2~3초 : 3획 -->
+            <!-- 3~5초 : 정지 -->
             
         </div>
     </div>
-    
+
+    <div class="container">
+        <div class="animation-container">
+            <div class="line1 line hor-line top"></div>
+            <div class="line2 line ver-line left"></div>
+            <div class="line3 line ver-line right"></div>
+            <div class="line4 line hor-line bottom"></div>  
+        </div>
+        <div class="animation-container">
+            <div class="line1 line hor-line top"></div>
+            <div class="line2 line ver-line left"></div>
+            <div class="line3 line ver-line right"></div>
+            <div class="line4 line hor-line bottom"></div>  
+        </div>
+        <div class="animation-container">
+            <div class="line1 line hor-line top"></div>
+            <div class="line2 line ver-line right"></div>
+        </div>
+    </div>
+
 </body>
 </html>
