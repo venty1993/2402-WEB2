@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        section {
+            padding: 0 32px;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contents-container {
+            display: flex;
+            gap: 16px;
+        }
+
+        .content {
+            height: 200px;
+            border: 1px solid #222;
+            padding: 16px;
+            box-sizing: border-box;
+            display: flex;
+            gap: 16px;
+        }
+
+        .temp-img {
+            height: 100%;
+            aspect-ratio: 1;
+            background-color: red;
+        }
+
+    
+        @media screen and (max-width: 799px) {
+
+            section {
+                padding: 0 16px;
+            }
+            .contents-container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="section-container">
+            <ul class="contents-container">
+                <li class="content">
+                    <div class="temp-img"></div>
+                    <div class="contents-explane">
+                        <h2>제목영역</h2>
+                        <h3>소제목영역</h3>
+                        <p>설명은 로렘입숨으로  설명은 로렘입숨으로  설명은 로렘입숨으로 </p>
+                    </div>
+                </li>
+                <li class="content">
+                    <div class="temp-img"></div>
+                    <div class="contents-explane">
+                        <h2>제목영역</h2>
+                        <h3>소제목영역</h3>
+                        <p>설명은 로렘입숨으로  설명은 로렘입숨으로  설명은 로렘입숨으로 </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
