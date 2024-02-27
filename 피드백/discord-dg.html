@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            /* margin: 0 auto;
+            
+            width: 1160px;
+            height: 64px; */
+        }
+
+        ul {
+            list-style: none;
+            text-decoration: none;
+            /* color: black; */
+            /* font-weight: bold; */
+        }
+
+        main {
+            height: 300px;
+            background-image: url(../discord-clone/img/main-background.png);
+            background-size: cover;
+            padding: 0 32px;
+        }
+
+        .main-container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            gap: 56px;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: white;
+            font-size: 40px;
+        }
+
+        .search-container{
+            position: relative;
+            width: 100%;
+        }
+
+        .search-icon {
+            transform:translate(-50%,-50%);
+            top: 50%;
+            left: 20px;
+            position: absolute;
+        }
+
+        .search-icon * {
+            stroke: gray;
+        }
+
+        .search-container > input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            padding-left: 36px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .search-container > input:focus{
+
+            outline-style: solid;
+            outline-color: blue;
+            outline-width: 2px;
+        }
+
+        section#help-main {
+            padding: 0 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section-container {
+        }
+
+        .help-content {
+            border: 1px solid #CCC;
+            width: 250px;
+            height: 300px;
+            border-radius: 4px;
+        }
+
+        .help-content:hover {
+            background-color: #EEE;
+        }
+
+        .help-content-img {
+            width: 150px;
+        }
+
+        .help-content > a {
+            padding: 16px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .content-heading {
+            color: #5865F2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-heading::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 40px;
+            background-color: gray;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="img/logo-blue.svg" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">피드백</a></li>
+                    <li><a href="#" class="lang-select">한국어</a></li>
+                    <li><a href="#">문의 등록</a></li>
+                </ul>
+                <button class="hamberger-button"><img src="" alt=""></button>
+                <a href="#">로그인</a>
+            </nav>
+        </div>  
+    </header>    
+
+    <main>
+        <div class="main-container">
+            <h1>고객 지원 센터</h1>
+            <div class="search-container">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-iconb" aria-hidden="true">
+                    <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"></circle>
+                    <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"></path>
+                  </svg>
+                <input type="search" placeholder="검색">
+            </div>
+        </div>
+    </main>
+
+    <section id="help-main">
+        <div class="section-container">
+            <h2>도움이 필요하신가요? 저희가 도와드리겠습니다.</h2>
+            <p>계정 설정부터 승인까지 Discord와 관련된 모든 것을 문의하세요.</p>
+            <p>Discord를 시작한 지 얼마 안 되어 팁을 찾고 계신가요? 그렇다면, 저희의 초보자를 위한 가이드를 확인해 보세요!</p>
+            <ul class="help-contents-wrapper">
+                <li class="help-content">
+                    <a href="#">
+                        <img src="../discord-clone/img/list-notice.svg" alt="" class="help-content-img">
+                        <h3 class="content-heading">공지사항</h3>
+                        <p class="content-explane">들어보세요. 무언가 심상치 않은 일이 벌어지고 있습니다.</p>
+                    </a>
+                </li>
+
+
+                <!-- 여기까지 봤어요 -->
+                
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>Discord 인터페이스</h3>
+                        <q>이 버튼은 무엇인가요?</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>계정 설정</h3>
+                        <q>당신도 당신의 계정도 특별한 눈송이입니다.</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>시작하기</h3>
+                        <q>첫 단추를 제대로 끼워야 합니다.</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>서버 설정</h3>
+                        <q>실내 장식 만큼 재미있는 것.</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>커뮤니티 프로그램</h3>
+                        <q>HypeSquaders를 위한 광고, 파트너를 위한 파티</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>Nitro</h3>
+                        <q>쓰러질 때까지 쇼핑하기면 안 돼요! 저희가 도와드릴게요.</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>청구서</h3>
+                        <q>은행 계좌 잔액을 보는 기분.</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>신뢰 & 보안</h3>
+                        <q>안전하고 건전하게</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>자주 묻는 질문</h3>
+                        <q>스스로 해결해 보아요.</q>
+                    </div>
+                </li>
+
+                
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-container">
+            <h2>도움을 받을 수 있는 다른 방법</h2>            
+            <ul>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>게임 개발자</h3>
+                        <q>Discord의 API와 SDK를 이용한 봇, 앱, 게임 개발 지원의 집!</q>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h3>Twitter</h3>
+                        <q>질문이 있으신가요? 저희에게 트윗을 보내주세요!</q>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-top"> 
+                <button>자세히</button>
+            </div>
+            <div class="footer-center">
+
+            </div>
+            <div class="bottom">
+
+                <div>
+                    <div class="logo-container"></div>
+                </div>
+
+                <div>
+                    <ul>
+                        <li><a href="">다운로드</a></li>
+                        <li><a href="">지원</a></li>
+                        <li><a href="">피드백</a></li>
+                        <li><a href="">상태</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li><a href="">파트너</a></li>
+                        <li><a href="">HypeSquad</a></li>
+                        <li><a href="">상점</a></li>
+                        <li><a href="">제품 이미지</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li><a href="">회사</a></li>
+                        <li><a href="">직업<span>-</span><span></span>구인</span></a></li>
+                        <li><a href="">블로그</a></li>
+                        <li><a href="">조건<span>&</span>개인정보</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
