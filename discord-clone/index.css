@@ -2,6 +2,15 @@
     --main-color : #5865f2;
 }
 
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
 
 header {
     padding: 0 48px;
@@ -176,6 +185,7 @@ section {
 
 .help-content-img {
     width: 106px;
+    margin: 0 auto;
 }
 
 .content-heading {
@@ -206,6 +216,7 @@ section {
 
 #more-help {
     text-align: center;
+    padding-bottom: 80px;
 }
 
 #more-help h2 {
@@ -215,6 +226,164 @@ section {
 
 .help-content.diff {
     width: 260px;
+}
+
+footer {
+    background-color: #121315;
+    overflow: hidden;
+}
+
+.footer-container {
+    margin: 0 auto;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-more {
+    text-align: center;
+    padding: 48px;
+
+}
+
+.footer-more > button {
+    background-color: #3BA55C;
+    border: none;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+
+}
+
+.footer-devices {
+    position: relative;
+    border-bottom: 1px solid #353535;
+    width: 1000px;
+}
+
+.footer-devices > img {
+    height: 150px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.icons img {
+    height: 56px;
+    opacity: 0.5;
+
+    transition: 0.2s;
+
+    position: absolute;
+    top: 72px;
+
+    width: auto;
+}
+
+.icons img:hover {
+    opacity: 1;
+}
+
+.icon-browsers {
+    left: 182px;
+}
+
+.icon-android {
+    left: 470px;
+}
+
+.icon-apple {
+    left: 560px;
+}
+
+.icon-window {
+    left: 688px;
+}
+
+.icon-mac {
+    left: 772px;
+}
+
+.footer-nav-container {
+    display: flex;
+    gap: 200px;
+    padding: 32px 32px;
+    padding-bottom: 48px;
+    width: 100%;
+}
+
+.footer-logo-container {
+    width: 150px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-grow: 1;
+}
+.footer-nav > ul {
+    /* flex : 1 0 100px*/
+    /* flex : 1 <- grow */
+    /* flex : 100px <- basis */
+    /* flex-grow: 1; */
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav-sign {
+    color: #666;
+    font-size: 12px;
+}
+
+.footer-nav-ex {
+    color: green;
+    font-size: 14px;
+}
+
+#help {
+    position: fixed;
+    right: 16px;
+    bottom: 8px;
+    padding: 0;
+}
+
+#help > button {
+    background-color: var(--main-color);
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: white;
 }
 
 
