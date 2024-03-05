@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밴드</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- a태그 : inline -->
+            <!-- h1태그 : block -->
+            <!-- 원래 block > inline이 들어가는 형태 여야 되는데 -->
+            <!-- a태그만은 예외(특별취급) -->
+            <!-- p>span (o) -->
+            <!-- span>p (x) -->
+            <h1>
+                <a href="#">
+                    <span class="logo-img"></span>
+                    <span class="hide-text">BAND</span>
+                </a>
+            </h1>
+
+            <div class="header-button-container">
+                <button class="lang-button">한국어</button>
+                <a href="#">회원가입</a>
+                <a href="#" class="normal-btn green-btn login">로그인</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="cover">
+        <div class="section-container">
+            <figure class="cover-img">
+                <img src="img/bg_sloganImg.jpg" alt="밴드 커버">
+            </figure>
+            <div class="cover-contents-container">
+                <h2>모임이 쉬워진다!
+                    <br>
+                    우리끼리 밴드</h2>
+                <p class="subtitle">당신의 모임도 BAND로 시작하세요.</p>
+                <a href="#" class="normal-btn green-btn cover-button">로그인</a>
+                <a href="#" class="normal-btn white-btn cover-button">회원가입</a>
+                <ul>
+                    <li>내게 맞는 밴드를 만나려면<a href="#" class="cover-help-link">밴드 찾기</a></li>
+                    <li>모임별 밴드 활용법<a href="#" class="cover-help-link">밴드 가이드 보기</a></li>
+                    <li>만 13세 미만이라면?<a href="#" class="cover-help-link">'밴드 키즈'알아보기</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="section-container">
+            <h2>모임을 위한 공간, 밴드</h2>
+            <p class="subtitle">
+                밴드는 그룹 멤버와 함께 하는 공간입니다.
+                동호회, 스터디, 주제별 모임을 밴드로 시작하세요.
+            </p>
+        </div>
+    </section>
+
+    <section id="introduction">
+        <div class="section-container">
+            <ul class="introduce-list-container">
+                <li class="introduce-list-content">
+                    <img class="introduce-list-img" src="img/img_seo01.jpg" alt="하이파이브 직전">
+                    <h3 class="introduce-list-heading">어떤 모임이라도!
+                    </h3>
+                    <p class="introduce-list-p">친구, 가족, 동료 등 함께 하고 싶은 사람과
+                        우리만의 공간을 만들어보세요.</p>
+                </li>
+                <li class="introduce-list-content">
+                    <img class="introduce-list-img" src="img/img_seo02.jpg" alt="모여서 웃으며 회의">
+                    <h3 class="introduce-list-heading">모임에 딱 맞는 기능들
+                    </h3>
+                    <p class="introduce-list-p">투표로 의견을 모으고, 함께 일정을 공유하며
+                        게시판과 앨범에는 추억을 쌓아보세요.</p>
+                </li>
+                <li class="introduce-list-content">
+                    <img class="introduce-list-img" src="img/img_seo03.jpg" alt="사람들과 함께 산악자전거">
+                    <h3 class="introduce-list-heading">내가 원하는 모임 찾기
+                    </h3>
+                    <p class="introduce-list-p">취미, 스포츠, 또래 모임 등
+                        나와 같은 관심사 밴드를 찾을 수 있어요.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="recommend">
+        <div class="section-container">
+            <div class="section-header">
+                <h2></h2>
+                <a href="#">모두보기</a>
+            </div>
+            <ul class="recommend-list-container">
+                <li>
+                    <a href="#" class="unit-link"></a>
+                    <figure class="recommend-band-thumb">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="recommend-band-info">
+                        <h3 class="recommend-band-title"></h3>
+                        <p class="recommend-band-explane"></p>
+                        <p class="recommend-band-meta">
+                            멤버 <span class="recommend-band-membercount"></span>· 리더 <span class="recommend-band-leader"></span>
+                        </p>
+                        <a href="#"><span class="recommend-band-category"></span> 밴드 더보기</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
