@@ -3,6 +3,17 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 .hide-text {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -12,9 +23,108 @@ img {
     width: 1px;
 }
 
+.section-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .logo-img {
     background: url('img/spr_intro.png') no-repeat 0 -98px;
 	width: 78px;
 	height: 29px;
     display: block;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f8f8fa;
+    min-width: 1000px;
+}
+
+.header-button-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.lang-button {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+}
+
+.lang-button::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border: 4px solid transparent;
+    border-top-color: #666;
+    border-bottom: none;
+}
+
+.normal-btn {
+    display: block;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.green-btn {
+    background-color: #21c531;
+    color: white;
+    font-weight: bold;
+}
+
+.login {
+    padding: 10px 24px;
+}
+
+/* html line 28에 클래스 추가 */
+.sign-in {
+    color: #333;
+}
+
+#cover {
+    background-color: #f8f8fa;
+}
+
+#cover > .section-container {
+    display: flex;
+}
+
+.cover-img {
+    width: 60%;
+}
+
+.cover-contents-container {
+    width: 40%;
+}
+
+.recommend-list-container  {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.recommend-list-container > li {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+.recommend-band-thumb {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.unit-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
